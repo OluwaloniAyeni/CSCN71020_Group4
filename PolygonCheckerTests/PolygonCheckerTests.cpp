@@ -31,5 +31,10 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(0, 0, 0);
 			Assert::AreEqual("Not a Triangle", result);
 		}
+		TEST_METHOD(Test_InvalidTriangle_BoundarySum)
+		{
+			const char* result = analyzeTriangle(2, 3, 5);
+			Assert::AreEqual("Not a Triangle", result);
+		}
 	};
 }
