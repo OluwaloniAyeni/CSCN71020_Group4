@@ -56,6 +56,10 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(4, 5, 6);
 			Assert::AreEqual("Right-angled triangle with angles 90,37,53", result);
 		}
-
+		TEST_METHOD(Test_AcuteTriangle)
+		{
+			const char* result = analyzeTriangle(6, 7, 8);
+			Assert::AreEqual("Acute triangle with angles 46,58,76", result);
+		}
 	};
 }
