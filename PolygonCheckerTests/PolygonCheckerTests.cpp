@@ -61,5 +61,10 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(6, 7, 8);
 			Assert::AreEqual("Acute triangle with angles 46,58,76", result);
 		}
+		TEST_METHOD(Test_ObtuseTriangle)
+		{
+			const char* result = analyzeTriangle(2, 3, 4);
+			Assert::AreEqual("Obtuse triangle with angles 28, 46,106", result);
+		}
 	};
 }
