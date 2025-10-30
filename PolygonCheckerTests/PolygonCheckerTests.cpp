@@ -21,5 +21,10 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(0, 4, 5);
 			Assert::AreEqual("Not a triangle", result);
 		}
+		TEST_METHOD(Test_InvalidTriangle_NegativeSide)
+		{
+			const char* result = analyzeTriangle(-2, 5, 6);
+			Assert::AreEqual("Not a triangle", result);
+		}
 	};
 }
