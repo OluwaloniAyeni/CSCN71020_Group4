@@ -36,5 +36,10 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(2, 3, 5);
 			Assert::AreEqual("Not a Triangle", result);
 		}
+		TEST_METHOD(Test_EquilateralTriangle)
+		{
+			const char* result = analyzeTriangle(3, 3, 3);
+			Assert::AreEqual("Not a Triangle", result);
+		}
 	};
 }
