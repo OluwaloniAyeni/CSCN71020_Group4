@@ -51,5 +51,11 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(4, 5, 6);
 		    Assert:: AreEqual("Isosceles Triangle", result);
 		}
+		TEST_METHOD(Test_RightAngledTriangle)
+		{
+			const char* result = analyzeTriangle(4, 5, 6);
+			Assert::AreEqual("Right-angled triangle with angles 90,37,53", result);
+		}
+
 	};
 }
