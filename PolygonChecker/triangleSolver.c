@@ -1,29 +1,30 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <math.h>
+#include<string.h> //for strcpy
+
+#define PI 3.14159265358979323846
+
+
 
 #include "triangleSolver.h"
 
-char* analyzeTriangle(int side1, int side2, int side3) {
-	char* result = "";
-	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
-		result = "Not a triangle";
-	}
-	else if ((side1 + side2 <= side3) ||
-		(side1 + side3 <= side2) ||
-		(side2 + side3 <= side1)) {
-		result = "Not a triangle";
-	}
-	else if (side1 == side2 && side1 == side3) {
-		result = "Equilateral triangle";
-	}
-	else if ((side1 == side2 && side1 != side3) || 
-		(side1 == side3 && side1 != side2))
-	{
-		result = "Isosceles triangle";
-	}
-	else {
-		result = "Scalene triangle";
-	}
+
+//Function to calculate angles of the triangle
+void calculateAngles(int a, int b, int c, int* A, int* B, int* C)
+{
+	double angleA = acos((double)(b * b + c * c - a * a) / (2.0 * b * c)) * (180.0 / PI);
+	double angleB = acos((double)(a * a + c * c - b * b) / (2.0 * a * c)) * (180.0 / PI);
+	double angleC = 180.0 - (angleA + angleB);
+
+	//Round angles to nearest integer
+	*A = (int)(angleA + 0.5);
+	*B = (int)(angleB + 0.5);
+	*C = (int)(angleC + 0.5);
+
+}
+
+
+
+	
 
 	return result;
-}
