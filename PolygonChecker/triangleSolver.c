@@ -23,6 +23,17 @@ void calculateAngles(int a, int b, int c, int* A, int* B, int* C)
 
 }
 
+//Classify by angles
+const char* classifyByAngles(int A, int B, int C) {
+	if (A == 90 || B == 90 || C == 90)
+		return "Right-angled triangle";
+	else if (A < 90 && B < 90 && C < 90)
+		return "Acute triangle";
+	else
+		return "Obtuse triangle";
+}
+
+
 
 
 	
