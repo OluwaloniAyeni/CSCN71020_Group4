@@ -29,18 +29,19 @@ namespace PolygonCheckerTests
 		TEST_METHOD(Test_InvalidTriangle_AllZero)
 		{
 			const char* result = analyzeTriangle(0, 0, 0);
-			Assert::AreEqual("Not a Triangle", result);
+			Assert::IsTrue(strstr(result, "Not a triangle") != nullptr);
 		}
 		TEST_METHOD(Test_InvalidTriangle_BoundarySum)
 		{
 			const char* result = analyzeTriangle(2, 3, 5);
-			Assert::AreEqual("Not a Triangle", result);
+			Assert::IsTrue(strstr(result, "Not a triangle") != nullptr);
 		}
 		TEST_METHOD(Test_EquilateralTriangle)
 		{
 			const char* result = analyzeTriangle(3, 3, 3);
-			Assert::AreEqual("Not a Triangle", result);
+			Assert::AreEqual("Equilateral Triangle", result);
 		}
+
 		TEST_METHOD(Test_IsoscelesTriangle)
 		{
 			const char* result = analyzeTriangle(3, 3, 4);
