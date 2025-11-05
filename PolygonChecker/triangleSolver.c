@@ -65,7 +65,7 @@ char* analyzeTriangle(int side1, int side2, int side3) {
 	const char* angleType = classifyByAngles(A, B, C);
 
 	//Combine side and angle types into expected string format
-	_snprintf_s(result, sizeof(result), "%s with angles %d,%d,%d", angleType, A, B, C);
+	sprintf_s(result, sizeof(result), "%s with angles %d,%d,%d", angleType, A, B, C);
 
 	//Special case: Equilateral triangle is always acute
 	if (side1 == side2 && side1 == side3)
