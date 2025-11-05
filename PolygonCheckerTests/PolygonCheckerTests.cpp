@@ -49,12 +49,12 @@ namespace PolygonCheckerTests
 		TEST_METHOD(Test_ScaleneTriangle)
 		{
 			const char* result = analyzeTriangle(4, 5, 6);
-		    Assert:: AreEqual("Isosceles Triangle", result);
+		    Assert:: AreEqual("Scalene triangle with angles 41,53,86", result);
 		}
 		TEST_METHOD(Test_RightAngledTriangle)
 		{
-			const char* result = analyzeTriangle(4, 5, 6);
-			Assert::AreEqual("Right-angled triangle with angles 90,37,53", result);
+			const char* result = analyzeTriangle(3, 4, 5);
+			Assert::AreEqual("Right-angled triangle with angles 37,53,90", result);
 		}
 		TEST_METHOD(Test_AcuteTriangle)
 		{
