@@ -88,6 +88,11 @@ namespace PolygonCheckerTests
 			int result = isRectangle(4, 4, 4, 4, 9, 7, 9, 3);
 			Assert::AreEqual(0, result);
 		}
+		TEST_METHOD(Parallelogram_Returns0)
+		{
+			int result = isRectangle(2, 3, 6, 4, 8, 6, 4, 5);
+			Assert::AreEqual(0, result);
+		}
 
 	};
 }
