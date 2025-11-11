@@ -78,5 +78,10 @@ namespace PolygonCheckerTests
 			int result = isRectangle(3, 2, 8, 2, 8, 6, 3, 6);
 			Assert::AreEqual(1, result);
 		}
+		TEST_METHOD(InvalidShape_Returns0)
+		{
+			int result = isRectangle(1, 1, 6, 1, 5, 3, 2, 4);
+			Assert::AreEqual(0, result);
+		}
 	};
 }
