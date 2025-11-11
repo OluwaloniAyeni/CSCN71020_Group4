@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 	extern "C"{
 #include "../PolygonChecker/triangleSolver.h"
+#include "../PolygonChecker/rectangleSolver.h"
 }
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -66,6 +67,11 @@ namespace PolygonCheckerTests
 		{
 			const char* result = analyzeTriangle(2, 3, 4);
 			Assert::IsTrue(strstr(result, "Obtuse") != nullptr);
+		}
+		TEST_METHOD(ValidRectangle_Returns1)
+		{
+			int result = isRectangle(2, 5, 7, 5, 7, 9, 2, 9);
+			Assert::AreEqual(1, result);
 		}
 	};
 }
