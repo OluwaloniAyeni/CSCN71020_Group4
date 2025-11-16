@@ -1,3 +1,4 @@
+**WEEK 1* 
 # Polygon Checker
 
 ## Project Overview
@@ -52,4 +53,99 @@ During Week 1, the team completed the triangle analysis module and implemented u
 - Triangle type by angles
 - Basic TDD workflow (failing -> passing tests)
 
-Next step (Week 2): Begin the Rectangle Detection feature and extend unit testing coverage.
+----
+## Next step (Week 2)
+- Begin the Rectangle Detection feature and extend unit testing coverage.
+
+
+**WEEK 2**
+
+As of Week 2, the project includes the triangle analysis module from Week 1 and introduces a new rectangle detection module. 
+
+## Features (Week 2)
+
+### Triangle Analysis (Week 1)
+- Accepts three side lengths.
+- Validates if the sides form a triangle.
+- Classifies triangles by:
+  - Side type: Equilateral, Isosceles, Scalene
+  - Angle type: Right-angled, Acute, Obtuse
+- Computes and returns triangle angles.
+- Displays the final classification.
+
+### Rectangle Detection (Week 2)
+- Accepts four coordinate points.
+- Determines if the points form a rectangle using the following checks:
+  - Duplicate point rejection
+  - Opposite side length equality
+  - Diagonal equality
+  - Right-angle verification using dot product
+- Returns:
+  - 1 if the points make a valid rectangle
+  - 0 if not a rectangle
+
+## Menu System
+A simple console menu allows the user to:
+- Analyze a triangle
+- Exit the program
+
+(Rectangle menu integration planned for Week 3.)
+
+## How to Build and Run
+1. Clone the repository: git clone https://github.com/OluwaloniAyeni/CSCN71020_Group4.git
+
+2. Open the solution in Visual Studio 2022.
+
+3. Ensure the project uses the C99 standard.
+
+4. Build the solution.
+
+5. Run the program.
+
+6. Follow the on-screen prompts.
+
+
+
+## Unit Testing (Week 2)
+
+Unit testing is implemented using the Microsoft C++ Native Test Framework.
+The team followed a Test-Driven Development (TDD) workflow, writing failing tests before implementing the corresponding code.
+
+## Current Test Coverage
+## Triangle Tests:
+
+- Invalid triangle detection
+- Zero and negative side rejection
+- Boundary sum rule checks
+- Side-type classification:
+  - equilateral
+  - isosceles
+  - scalene)
+- Angle-type classification
+  - right
+  - acute
+  - obtuse
+- Angle calculation validation
+- Combined output verification
+
+## Rectangle Tests (New for Week 2)
+
+- Valid rectangle detection
+- Invalid quadrilateral detection
+- Parallelogram rejection
+- Duplicate point rejection
+- Diagonal equality checks
+- Right-angle validation using dot product
+
+----
+## Week 2 Progress Summary
+
+- During Week 2, the team implemented the rectangle solver module and expanded the test suite.
+
+## Completed work:
+
+- Implemented isRectangle with side, diagonal, angle, and duplicate checks
+- Added rectangle test cases covering valid and invalid shapes
+- Refined triangle test suite for accuracy
+- Cleaned warnings and updated solver files
+- Multiple commits documenting the development process
