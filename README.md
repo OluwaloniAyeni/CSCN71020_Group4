@@ -128,7 +128,7 @@ The team followed a Test-Driven Development (TDD) workflow, writing failing test
 - Angle calculation validation
 - Combined output verification
 
-Rectangle Tests (New for Week 2)
+Rectangle Tests (New for Week 2):
 
 - Valid rectangle detection
 - Invalid quadrilateral detection
