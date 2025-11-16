@@ -112,7 +112,7 @@ Unit testing is implemented using the Microsoft C++ Native Test Framework.
 The team followed a Test-Driven Development (TDD) workflow, writing failing tests before implementing the corresponding code.
 
 ## Current Test Coverage
-## Triangle Tests:
+ Triangle Tests:
 
 - Invalid triangle detection
 - Zero and negative side rejection
@@ -128,7 +128,7 @@ The team followed a Test-Driven Development (TDD) workflow, writing failing test
 - Angle calculation validation
 - Combined output verification
 
-## Rectangle Tests (New for Week 2)
+Rectangle Tests (New for Week 2)
 
 - Valid rectangle detection
 - Invalid quadrilateral detection
@@ -142,7 +142,7 @@ The team followed a Test-Driven Development (TDD) workflow, writing failing test
 
 - During Week 2, the team implemented the rectangle solver module and expanded the test suite.
 
-## Completed work:
+Completed work:
 
 - Implemented isRectangle with side, diagonal, angle, and duplicate checks
 - Added rectangle test cases covering valid and invalid shapes
