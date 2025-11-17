@@ -93,6 +93,11 @@ namespace PolygonCheckerTests
 			int result = isRectangle(2, 3, 6, 4, 8, 6, 4, 5);
 			Assert::AreEqual(0, result);
 		}
+		TEST_METHOD(RectangleArea_ReturnsIncorrectValue_Fails)
+		{
+			float area = calculateArea(2, 5, 7, 5, 7, 9, 2, 9);
+			Assert::AreEqual(30.0f, area, 0.001f);
+		}
 
 	};
 }
