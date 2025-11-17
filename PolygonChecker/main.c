@@ -3,6 +3,7 @@
 
 #include "main.h"
 #include "triangleSolver.h"
+#include "rectangleSolver.h"
 
 int side = 0;
 
@@ -23,6 +24,26 @@ int main() {
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf_s("%s\n", result);
 			break;
+		case 2:
+			printf_s("Rectangle selected.\n");
+
+			int coords[8];
+			int* p = coords;
+
+			getRectangleCoords(p);
+			if (isRectangle(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7]))
+			{
+				float area = calculateArea(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7]);
+				float perimeter = calculatePerimeter(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7]);
+				printf_s("Valid rectangle.\n");
+				printf_s("Area = %.2f\n", area);
+				printf_s("Perimeter = %.2f\n", perimeter);
+			}
+			else {
+				printf_s("Invalid rectangle.\n");
+			}
+			break;
+	
 		case 0:
 			continueProgram = false;
 			break;
@@ -44,6 +65,7 @@ void printWelcome() {
 
 int printShapeMenu() {
 	printf_s("1. Triangle\n");
+	printf_s("2. Rectangle\n");
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
@@ -61,4 +83,14 @@ int* getTriangleSides(int* triangleSides) {
 		scanf_s("%d", &triangleSides[i]);
 	}
 	return triangleSides;
+}
+	int* getRectangleCoords(int* coords)
+	{
+		printf_s("Enter the coordinates of the rectangle in the order x1 y1 x1 y2 x3 y3 x4 y4:\n");
+		for (int i = 0; i < 8; i++)
+		{
+			scanf_s("%d", &coords[i]);
+		}
+		return coords;
+
 }
