@@ -5,7 +5,6 @@
 #include "triangleSolver.h"
 #include "rectangleSolver.h"
 
-int side = 0;
 
 int main() {
 	bool continueProgram = true;
@@ -19,9 +18,9 @@ int main() {
 		case 1:
 			printf_s("Triangle selected.\n");
 			int triangleSides[3] = { 0, 0, 0 };
-			int* triangleSidesPtr = getTriangleSides(triangleSides);
-			//printf_s("! %d\n", triangleSidesPtr[0]);
-			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
+			getTriangleSides(triangleSides);
+			//printf_s("! %d\n", triangleSides[0]);
+			char* result = analyzeTriangle(triangleSides[0], triangleSides[1], triangleSides[2]);
 			printf_s("%s\n", result);
 			break;
 		case 2:
