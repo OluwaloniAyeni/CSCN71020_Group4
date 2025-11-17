@@ -96,7 +96,8 @@ namespace PolygonCheckerTests
 		TEST_METHOD(RectangleArea_ReturnsIncorrectValue_Fails)
 		{
 			float area = calculateArea(2, 5, 7, 5, 7, 9, 2, 9);
-			Assert::AreEqual(30.0f, area, 0.001f);
+			//correct expected value
+			Assert::AreEqual(20.0f, area, 0.001f);
 		}
 
 	};
