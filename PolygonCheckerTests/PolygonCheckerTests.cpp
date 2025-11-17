@@ -8,10 +8,13 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace PolygonCheckerTests
 {
-	TEST_CLASS(PolygonCheckerTests)
+	//---------------------------------------------------------------
+	//  TRIANGLE TESTS
+	//---------------------------------------------------------------
+	TEST_CLASS(TriangleTests)
 	{
 	public:
-		
+		// ------- INVALID TRIANGLES ---------
 		TEST_METHOD(Test_InvalidTriangle)
 		{
 			const char* result = analyzeTriangle(1, 2, 3);
@@ -37,6 +40,8 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(2, 3, 5);
 			Assert::IsTrue(strstr(result, "Not a triangle") != nullptr);
 		}
+
+		//--------- VALID TRIANGLES ----------
 		TEST_METHOD(Test_EquilateralTriangle)
 		{
 			const char* result = analyzeTriangle(3, 3, 3);
@@ -51,7 +56,7 @@ namespace PolygonCheckerTests
 		TEST_METHOD(Test_ScaleneTriangle)
 		{
 			const char* result = analyzeTriangle(4, 5, 6);
-		    Assert::IsTrue(strstr(result, "Acute") != nullptr);
+			Assert::IsTrue(strstr(result, "Acute") != nullptr);
 		}
 		TEST_METHOD(Test_RightAngledTriangle)
 		{
@@ -68,6 +73,16 @@ namespace PolygonCheckerTests
 			const char* result = analyzeTriangle(2, 3, 4);
 			Assert::IsTrue(strstr(result, "Obtuse") != nullptr);
 		}
+	};
+
+	//-----------------------------------------------------------------------
+	//       RECTANGLE VALIDATION TESTS
+	//------------------------------------------------------------------------
+
+	TEST_CLASS(RectangleValidationTests)
+	{
+	public:
+		//------------- VALID RECTANGLES ------------
 		TEST_METHOD(ValidRectangle_Returns1)
 		{
 			int result = isRectangle(2, 5, 7, 5, 7, 9, 2, 9);
@@ -78,6 +93,8 @@ namespace PolygonCheckerTests
 			int result = isRectangle(3, 2, 8, 2, 8, 6, 3, 6);
 			Assert::AreEqual(1, result);
 		}
+
+		//----------- INVALID RECTANGLES
 		TEST_METHOD(InvalidShape_Returns0)
 		{
 			int result = isRectangle(1, 1, 6, 1, 5, 3, 2, 4);
@@ -92,14 +109,28 @@ namespace PolygonCheckerTests
 		{
 			int result = isRectangle(2, 3, 6, 4, 8, 6, 4, 5);
 			Assert::AreEqual(0, result);
+
 		}
-		TEST_METHOD(RectangleArea_ReturnsIncorrectValue_Fails)
+	};
+
+	//---------------------------------------------------------------
+	//   RECTANGLE AREA & PERIMETER TESTS
+	//----------------------------------------------------------------
+
+	TEST_CLASS(RectangleAreaPerimeterTests)
+	{
+	public:
+
+		//----------- AREA TESTS ---------
+		TEST_METHOD(RectangleArea_ReturnsCorrectValue)
 		{
 			float area = calculateArea(2, 5, 7, 5, 7, 9, 2, 9);
 			//correct expected value
 			Assert::AreEqual(20.0f, area, 0.001f);
 		}
-		TEST_METHOD(RectanglePerimeter_ReturnsIncorrectValue_Fails)
+
+		// -------------- PERIMETER TESTS ---------
+		TEST_METHOD(RectanglePerimeter_ReturnCorrectValue)
 		{
 			float p = calculatePerimeter(2, 5, 7, 5, 7, 9, 2, 9);
 			//correct expected value
