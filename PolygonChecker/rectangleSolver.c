@@ -32,8 +32,32 @@ int isRectangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
 	int diag1 = dist2(x1, y1, x3, y3);
 	int diag2 = dist2(x2, y2, x4, y4);
 
+
 if (d1 > 0 && d2 > 0 && d1 == d3 && d2 == d4 && diag1 == diag2 && dot(x1,y1,x2,y2,x3,y3,x4,y4)==0)
       return 1;
+
+float calculateArea(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
+{
+	if (!isRectangle(x1, y1, x2, y2, x3, y3, x4, y4))
+		return 0.0f;
+
+	float w = sqrtf((float)dist2(x1, y1, x2, y2));
+	float h = sqrtf((float)dist2(x2, y2, x3, y3));
+	return w * h;
+}
+
+float calculatePerimeter(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
+{
+	if (!isRectangle(x1, y1, x2, y2, x3, y3, x4, y4))
+		return 0.0f;
+
+	float w = sqrtf((float)dist2(x1, y1, x2, y2));
+	float h = sqrtf((float)dist2(x2, y2, x3, y3));
+	return 2.0f * (w + h);
+}
+
+
+
 
 	return 0;
 }
