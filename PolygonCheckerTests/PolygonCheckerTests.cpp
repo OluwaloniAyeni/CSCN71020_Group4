@@ -99,6 +99,12 @@ namespace PolygonCheckerTests
 			//correct expected value
 			Assert::AreEqual(20.0f, area, 0.001f);
 		}
+		TEST_METHOD(RectanglePerimeter_ReturnsIncorrectValue_Fails)
+		{
+			float p = calculatePerimeter(2, 5, 7, 5, 7, 9, 2, 9);
+			//wrong expected value
+			Assert::AreEqual(25.0f, p, 0.001f);
+		}
 
 	};
 }
