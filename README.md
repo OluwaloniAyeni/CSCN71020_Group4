@@ -53,7 +53,7 @@ During Week 1, the team completed the triangle analysis module and implemented u
 - Triangle type by angles
 - Basic TDD workflow (failing -> passing tests)
 
-----
+-------
 ## Next step (Week 2)
 - Begin the Rectangle Detection feature and extend unit testing coverage.
 
@@ -93,15 +93,10 @@ A simple console menu allows the user to:
 
 ## How to Build and Run
 1. Clone the repository: git clone https://github.com/OluwaloniAyeni/CSCN71020_Group4.git
-
 2. Open the solution in Visual Studio 2022.
-
 3. Ensure the project uses the C99 standard.
-
 4. Build the solution.
-
 5. Run the program.
-
 6. Follow the on-screen prompts.
 
 
@@ -137,7 +132,7 @@ Rectangle Tests (New for Week 2):
 - Diagonal equality checks
 - Right-angle validation using dot product
 
-----
+-------
 ## Week 2 Progress Summary
 
 - During Week 2, the team implemented the rectangle solver module and expanded the test suite.
@@ -149,3 +144,106 @@ Completed work:
 - Refined triangle test suite for accuracy
 - Cleaned warnings and updated solver files
 - Multiple commits documenting the development process
+
+
+-------
+**WEEK 3**
+By Week 3, the application now supports both Triangle Analysis and Rectangle Detection, with full menu integration and added rectangle calculations (area and perimeter).
+
+## Features (Week 3)
+
+### Triangle Analysis (From Week 1 & Week 2)
+
+- Accepts three side lengths.
+- Validates if the sides form a triangle.
+- Classifies triangles by:
+- Side type: Equilateral, Isosceles, Scalene
+- Angle type: Right-angled, Acute, Obtuse
+- Computes triangle angles.
+- Displays full classification result.
+
+### Rectangle Detection & Calculations (Updated in Week 3)
+
+- Accepts four coordinate points.
+- Full rectangle validation using:
+  - Duplicate point rejection
+  - Opposite side length equality
+  - Equal diagonals
+  - Right-angle checking using dot product
+- Now includes:
+  - Area calculation
+  - Perimeter calculation
+- Returns:
+  - 1 → valid rectangle
+  - 0 → invalid rectangle
+ 
+
+## Menu System (Updated in Week 3)
+
+- A text-based menu now allows the user to:
+- Analyze a triangle
+- Analyze a rectangle
+- Exit the program
+
+
+## How to Build and Run
+1. Clone the repository: git clone https://github.com/OluwaloniAyeni/CSCN71020_Group4.git
+2. Open the solution in Visual Studio 2022.
+3. Ensure the project uses the C99 standard.
+4. Build the solution.
+5. Run the program.
+6. Follow the on-screen prompts.
+
+
+## Unit Testing (Week 3)
+
+Unit testing continues using the Microsoft C++ Native Test Framework, following a TDD approach (failing test → implementation → passing test).
+
+## Current Test Coverage
+ Triangle Tests:
+
+- Triangle validity detection
+- Zero/negative value rejection
+- Triangle inequality rule checks
+- Side-type classification
+  - Equilateral
+  - Isosceles
+  - Scalene
+- Angle-type classification
+  - Right
+  - Acute
+  - Obtuse
+  
+- Angle calculation verification
+- Combined output formatting
+
+ Rectangle Tests (Expanded in Week 3):
+ - Valid rectangle detection
+ - Invalid quadrilateral rejection
+ - Parallelogram rejection
+ - Duplicate coordinate rejection
+ - Diagonal equality testing
+ - Right-angle verification (dot product method)
+ - New Week 3 tests:
+  - Area calculation tests
+  - Perimeter calculation tests
+  - Invalid-rectangle area/perimeter returning 0
+  - Additional coordinate ordering scenarios
+
+  -------
+## Week 3 Progress Summary
+
+- During Week 3, the team completed the full rectangle module and integrated it into the main program.
+
+Completed Work: 
+- Added rectangle option to the main menu.
+- Implemented getRectangleCoords() in main.c for user input.
+- Completed area and perimeter functions in rectangleSolver.c.
+- Updated the rectangle validation logic (duplicate points, diagonals, dot product angle check).
+- Expanded rectangle test suite to include:
+  - Area tests
+  - Perimeter tests
+  - Additional invalid-shape tests
+- Refined triangle and rectangle solvers for accuracy.
+- Cleaned warnings and improved code structure.
+- Multiple commits documenting Week 3 progress.
