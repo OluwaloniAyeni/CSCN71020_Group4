@@ -148,7 +148,8 @@ Completed work:
 
 -------
 **WEEK 3**
-By Week 3, the application now supports both Triangle Analysis and Rectangle Detection, with full menu integration and added rectangle calculations (area and perimeter).
+
+The application now supports both Triangle Analysis and Rectangle Detection, with full menu integration and added rectangle calculations (area and perimeter).
 
 ## Features (Week 3)
 
